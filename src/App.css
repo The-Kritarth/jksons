@@ -58,4 +58,8 @@ body{
   .Product .cardRow{
     flex-direction: column;
   }
+
+  .Product .cardRow img{
+    height: 150px;
+  }
 }

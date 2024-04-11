@@ -1,8 +1,11 @@
 import React from "react";
 
+import Topbar from "./Topbar";
+
 function FAQ() {
   return (
     <>
+      <Topbar/>
       <div className="container" style={{marginTop:'100px',marginBottom:'206px',width:'80%'}}>
         <div
             style={{ textAlign: "center", color: "#800020", marginBottom: "7%"}}

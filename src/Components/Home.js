@@ -2,9 +2,12 @@ import React from "react";
 
 import HomeBg from "../Assets/HomeBg.png";
 import Advisory from "../Assets/Advisory.png";
+import Topbar from "./Topbar";
 
 function Home() {
   return (
+    <>
+    <Topbar/>
     <div className="container Home">
       <div
         style={{
@@ -150,6 +153,7 @@ function Home() {
 
       </div>  
     </div>
+    </>
   );
 }
 

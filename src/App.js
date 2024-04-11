@@ -8,14 +8,14 @@ import About from "./Components/About";
 import Home from "./Components/Home";
 import Lowbar from "./Components/Lowbar";
 import Product from "./Components/Product";
-import Topbar from "./Components/Topbar";
+
 
 function App() {
   return (
     <>
       
       <Router>
-        <Topbar/>
+        
         <Scroll
           color="white"
           style={{ backgroundColor: "black", opacity: ".5" }}

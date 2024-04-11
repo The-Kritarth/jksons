@@ -3,10 +3,12 @@ import React from "react";
 import Commitments from "../Assets/Commitments.png";
 import CommitmentsEx from "../Assets/CommitmentsEx.png";
 import WWD from "../Assets/WWD.png";
+import Topbar from "./Topbar";
 
 function About() {
   return (
     <>
+      <Topbar/>
       <div
         className="container"
         style={{ marginTop: "100px", marginBottom: "100px" }}

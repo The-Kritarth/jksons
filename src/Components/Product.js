@@ -7,9 +7,12 @@ import Product4 from "../Assets/Product4.png";
 import Product5 from "../Assets/Product5.png";
 import Product6 from "../Assets/Product6.png";
 import Product7 from "../Assets/Product7.png";
+import Topbar from "./Topbar";
 
 function Product() {
   return (
+    <>
+    <Topbar/>
     <div
       className="container Product"
       style={{ marginTop: "100px", marginBottom: "100px" }}
@@ -159,6 +162,7 @@ function Product() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
