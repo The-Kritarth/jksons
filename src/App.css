@@ -1,3 +1,8 @@
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 .App {
   text-align: center;
 }
@@ -34,5 +39,23 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Home */
+@media screen and (max-width:750px){
+  .Home .cardRow{
+    flex-direction: column;
+  }
+
+  .Home .AdvisoryImg{
+    display: none;
+  }
+}
+
+/* Product */
+@media screen and (max-width:750px){
+  .Product .cardRow{
+    flex-direction: column;
   }
 }
