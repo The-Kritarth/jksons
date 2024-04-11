@@ -1,10 +1,12 @@
 import { React,useState} from 'react';
 import { Navbar, Nav} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import {useLocation, Link} from 'react-router-dom';
 
 import Logo from '../Assets/Logo.png'
 
 function Topbar() {
+  const location = useLocation();
+  const currentPath = location.pathname;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -12,6 +14,9 @@ function Topbar() {
   };
   const handleMenuItemClick = () => {
     setIsMenuOpen(false); // Close the menu when a menu item is clicked
+  };
+  const isActive = (path) => {
+    return currentPath === path;
   };
   return (
     
@@ -35,11 +40,11 @@ function Topbar() {
             <Nav>
               <ul className="navbar-nav">
                 {/* <li className="nav-item" ><Link className="nav-link" aria-current="page" to="/"><img src={Logo} alt="" style={{height:'60px',width:'130px'}}/></Link></li> */}
-                <li className="nav-item" ><Link className="nav-link" onClick={handleMenuItemClick} aria-current="page" to="/"><b>Home</b></Link></li>
-                <li className="nav-item" ><Link className="nav-link" onClick={handleMenuItemClick} aria-current="page" to="/About"><b>About</b></Link></li> 
-                <li className="nav-item" ><Link className="nav-link" onClick={handleMenuItemClick} aria-current="page" to="/Product"><b>Products</b></Link></li> 
+                <li className="nav-item" ><Link className="nav-link" onClick={handleMenuItemClick} aria-current="page" to="/">{isActive('/') ? <b><u>Home</u></b> : <b>Home</b>}</Link></li>
+                <li className="nav-item" ><Link className="nav-link" onClick={handleMenuItemClick} aria-current="page" to="/About">{isActive('/About') ? <b><u>About</u></b> : <b>About</b>}</Link></li> 
+                <li className="nav-item" ><Link className="nav-link" onClick={handleMenuItemClick} aria-current="page" to="/Product">{isActive('/Product') ? <b><u>Products</u></b> : <b>Products</b>}</Link></li> 
                 
-                <li className="nav-item" ><Link className="nav-link" onClick={handleMenuItemClick} aria-current="page" to="/Career"><b>Career</b></Link></li>
+                <li className="nav-item" ><Link className="nav-link" onClick={handleMenuItemClick} aria-current="page" to="/Career">{isActive('/Career') ? <b><u>Career</u></b> : <b>Career</b>}</Link></li>
               </ul>
             </Nav>
           </Navbar.Collapse>
